@@ -5,8 +5,9 @@ import './Mall.css';
 class Mall extends Component {
     constructor(props) {
     super(props);
-    this.state = {
-      products: []
+        this.state = {
+          isDisabled: false,
+          products: []
     }
   }
 
@@ -25,7 +26,9 @@ class Mall extends Component {
             "Content-Type": "application/json"
           }
         })
+        this.setState({isDisabled: true});
         fetch(request)
+          .then(() => this.setState({isDisabled: false}))
           .catch(error => console.error(error))
       }
 
@@ -42,7 +45,8 @@ class Mall extends Component {
           price={product.price}
           unit={product.unit}
           imageUrl={product.imageUrl}
-          onAddProduct={this.handleAddProduct}/>)}
+          onAddProduct={this.handleAddProduct}
+          isDisabled={this.state.isDisabled}/>)}
       </div>
     );
   }
