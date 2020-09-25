@@ -1,0 +1,7 @@
+.mall-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 40px 30px 0 30px;
+    background-color: white;
+  } 
