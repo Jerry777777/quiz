@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class ProductControllerTest {
     @Autowired
     MockMvc mockMvc;
-    
+
 
     @Test
     void should_get_all_products() throws Exception {

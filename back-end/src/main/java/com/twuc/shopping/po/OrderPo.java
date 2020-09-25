@@ -11,21 +11,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Product")
+@Table(name = "product_order")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductPo {
+public class OrderPo {
     @Id
     @GeneratedValue
     private Integer id;
 
-    private String name;
+    private Integer productId;
 
-    private int price;
-
-    private String unit;
-
-    private String imageUrl;
+    private int count;
 }
