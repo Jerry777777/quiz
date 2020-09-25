@@ -8,25 +8,33 @@
 
 .header ul {
   display: flex;
+  height: 100%;
+  margin: 0;
   list-style-type: none;
 }
 
-a {
+.header li {
+  display: flex;
+  height: 100%;
+}
+
+.header a {
+  height: 100%;
   text-decoration: none;
   color: #95a0a3;
   padding: 29px;
 }
 
-.active {
+header .active {
   background-color: #1690ff;
   color: white;
 }
 
-svg {
+header svg {
   margin-right: 10px;
 }
 
-footer {
+.app footer {
   position: absolute;
   bottom: 0;
   display: flex;

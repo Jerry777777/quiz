@@ -1,13 +1,11 @@
 import React, {Component}  from 'react';
 import './App.css';
-import {BrowserRouter as Router, NavLink} from "react-router-dom";
-import Switch from "react-router-dom/es/Switch";
-import Route from "react-router-dom/es/Route";
+import 'antd/dist/antd.css';
+import {BrowserRouter as Router, NavLink, Switch, Route, Redirect} from "react-router-dom";
 import Mall from "./components/Mall/Mall"
 import Order from "./components/Order/Order";
 import AddProduct from "./components/AddProduct/AddProduct";
 import { HomeOutlined, ShoppingCartOutlined, PlusOutlined } from '@ant-design/icons';
-import Redirect from "react-router-dom/es/Redirect";
 
 class App extends Component {
   render() {

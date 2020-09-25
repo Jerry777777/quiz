@@ -40,6 +40,7 @@ class Mall extends Component {
     return (
       <div className="mall-container">
         {this.state.products.map(product => <SingleProduct
+          key={product.id}
           id={product.id}
           name={product.name}
           price={product.price}
