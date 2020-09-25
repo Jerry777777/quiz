@@ -17,7 +17,7 @@ a {
   padding: 29px;
 }
 
-a:focus {
+.active {
   background-color: #1690ff;
   color: white;
 }
