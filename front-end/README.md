@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Tasking
+Task 1: 商城展示商品列表页面
+Sub task 1: 显示默认商品展示页面
+        Step 1：当处于商城页面下可以看到默认展示的六个商品
+        Step 2: 处理添加按钮
+Task 2: 订单显示页面
+Task 3: 添加商品页面
+Task 4: 添加页面footer
