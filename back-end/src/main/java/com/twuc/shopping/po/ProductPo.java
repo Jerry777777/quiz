@@ -1,4 +1,4 @@
-package com.twuc.shopping.dto;
+package com.twuc.shopping.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductDto {
+public class ProductPo {
     @Id
     @GeneratedValue
     private int id;
