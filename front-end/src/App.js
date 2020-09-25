@@ -6,6 +6,7 @@ import Route from "react-router-dom/es/Route";
 import Mall from "./components/Mall/Mall"
 import Order from "./components/Order/Order";
 import AddProduct from "./components/AddProduct/AddProduct";
+import {HomeOutlined, ShoppingCartOutlined, PlusOutlined} from '@ant-design/icons';
 
 class App extends Component {
   render() {
@@ -15,13 +16,13 @@ class App extends Component {
           <div className="header">
             <ul>
               <li>
-                <NavLink exact to="/">商城</NavLink>
+              <NavLink exact to="/"><HomeOutlined />商城</NavLink>
               </li>
               <li>
-                <NavLink to="/order">订单</NavLink>
+              <NavLink to="/order"><ShoppingCartOutlined />订单</NavLink>
               </li>
               <li>
-                <NavLink to="/add-product">添加商品</NavLink>
+              <NavLink to="/add-product"><PlusOutlined />添加商品</NavLink>
               </li>
             </ul>
           </div>
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/add-product" component={AddProduct}/>
           </Switch>
         </Router>
+        <footer>TW Mall ©2018 Created by ForCheng</footer>
       </div>
     );
   }
