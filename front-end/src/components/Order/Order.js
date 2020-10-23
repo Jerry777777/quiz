@@ -67,6 +67,7 @@ class Order extends Component {
 
     return (
       <div className="order-list">
+        <Table columns={columns} dataSource={data} pagination={false} />
         {data.length === 0 ?
           <span>暂无订单，返回<a href="/">商城页面</a>继续购买</span> :
           <Table columns={columns} dataSource={data} pagination={false}/>}
