@@ -39,9 +39,17 @@ public class ProductControllerTest {
     @Test
     public void add_goods() throws Exception {
         productRepository.deleteAll();
-        ProductPo productPo = ProductPo.builder()
-                .name("芬达").price(3).unit("听").imageUrl("https://s.yam.com/9kDww").build();
-        productRepository.save(productPo);
-
+        ProductPo productPo = productRepository.save(ProductPo.builder()
+                .name("cola").price(3).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
+        ProductPo productPo1 = productRepository.save(ProductPo.builder()
+                .name("coffee").price(2).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
+        ProductPo productPo2 = productRepository.save(ProductPo.builder()
+                .name("fenda").price(3).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
+        ProductPo productPo3 = productRepository.save(ProductPo.builder()
+                .name("scream").price(5).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
+        ProductPo productPo4 = productRepository.save(ProductPo.builder()
+                .name("cola").price(6).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
+        ProductPo productPo5 = productRepository.save(ProductPo.builder()
+                .name("cola").price(10).unit("bottle").imageUrl("https://s.yam.com/9kDww").build());
     }
 }
