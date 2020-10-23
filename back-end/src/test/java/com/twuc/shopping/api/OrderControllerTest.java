@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twuc.shopping.po.OrderPo;
 import com.twuc.shopping.po.ProductPo;
 import com.twuc.shopping.repository.OrderRepository;
+import com.twuc.shopping.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

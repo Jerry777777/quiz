@@ -1,5 +1,7 @@
 package com.twuc.shopping.api;
 
+import com.twuc.shopping.po.ProductPo;
+import com.twuc.shopping.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,9 +21,11 @@ public class ProductControllerTest {
     @Autowired
     MockMvc mockMvc;
 
+    @Autowired
+    ProductRepository productRepository;
 
     @Test
-    void should_get_all_products() throws Exception {
+    public void should_get_all_products() throws Exception {
         mockMvc.perform(get("/products").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(6)))
                 .andExpect(jsonPath("$[0].name", is("可乐1")))
@@ -30,5 +34,14 @@ public class ProductControllerTest {
                 .andExpect(jsonPath("$[2].price", is(1)))
                 .andExpect(jsonPath("$[3].unit", is("瓶")))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void add_goods() throws Exception {
+        productRepository.deleteAll();
+        ProductPo productPo = ProductPo.builder()
+                .name("芬达").price(3).unit("听").imageUrl("https://s.yam.com/9kDww").build();
+        productRepository.save(productPo);
+
     }
 }
